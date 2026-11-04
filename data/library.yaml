@@ -1,0 +1,65 @@
+# ===== کتابخانه =====
+# هر منبع یک بلوک است. برای افزودن منبع جدید یکی از بلوک‌ها را کپی و ویرایش کنید.
+# type باید یکی از: book, standard, note, checklist, tool, video
+# category باید یکی از: piping, software, process, civil, electrical, tools
+# url خالی = «به‌زودی» نمایش داده می‌شود.
+# هشدار حق نشر: فایل پولی و دارای کپی‌رایت را مستقیم قرار ندهید؛ معرفی + لینک منبع رسمی بگذارید.
+
+- title: "STP2PDMS؛ تبدیل STEP به لیست داده E3D/PDMS"
+  type: tool
+  category: tools
+  author: "کدبلاگ"
+  desc: "ابزار مرورگری رایگان برای تبدیل فایل STEP به لیست داده‌ی قابل استفاده در E3D/PDMS."
+  tags: [pdms, e3d, tool]
+  url: "https://t.me/AVEVAMACRO"
+  button: "دریافت از تلگرام"
+
+- title: "Backing Sheet؛ ساخت Underlay ایزودرفت از DXF"
+  type: tool
+  category: tools
+  author: "کدبلاگ"
+  desc: "ابزار ساخت فایل PLT و فایل گزینه‌ها (TEXT) برای استفاده از نقشه‌ی AutoCAD به‌عنوان Underlay در Isodraft."
+  tags: [isodraft, autocad, tool]
+  url: "https://t.me/AVEVAMACRO"
+  button: "دریافت از تلگرام"
+
+- title: "مجموعه ماکروهای NIKKHAH برای E3D/PDMS"
+  type: tool
+  category: software
+  author: "کدبلاگ"
+  desc: "ماکروهای کاربردی PML و فایل‌های mac برای کارهای روزمره‌ی مدل‌سازی پایپینگ."
+  tags: [pml, macro, pdms]
+  url: ""
+
+- title: "چک‌لیست بررسی مدل پایپینگ پیش از صدور ایزومتریک"
+  type: checklist
+  category: piping
+  author: "کدبلاگ"
+  desc: "فهرست مواردی که پیش از خروجی گرفتن از مدل سه‌بعدی باید کنترل شود."
+  tags: [checklist, isometric]
+  url: "/posts/piping-model-checklist/"
+  button: "مشاهده‌ی چک‌لیست"
+
+- title: "ASME B31.3 Process Piping"
+  type: standard
+  category: piping
+  author: "ASME"
+  desc: "استاندارد اصلی طراحی، مصالح، ساخت و بازرسی لوله‌کشی فرآیندی. نسخه‌ی رسمی را از ناشر تهیه کنید."
+  tags: [asme-b31-3, standards]
+  url: ""
+
+- title: "Piping Handbook"
+  type: book
+  category: piping
+  author: "Mohinder L. Nayyar"
+  desc: "مرجع جامع مهندسی پایپینگ؛ مناسب مطالعه‌ی مرحله‌ای از مبتدی تا پیشرفته."
+  tags: [piping, advanced]
+  url: ""
+
+- title: "راهنمای مرجع PML (جمع‌آوری‌شده برای ماکرونویسی)"
+  type: note
+  category: software
+  author: "کدبلاگ"
+  desc: "یادداشت‌ها و مرجع سریع دستورات PML برای نوشتن ماکرو."
+  tags: [pml, tutorial]
+  url: ""
