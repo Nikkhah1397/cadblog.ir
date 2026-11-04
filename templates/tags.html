@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-head"><h1>همه‌ی برچسب‌ها</h1><p>برچسب‌ها فهرست استاندارد و محدودی هستند تا پیدا کردن مطالب ساده بماند.</p></div>
+<div class="tags big">{% for t, n in tag_list %}{% if n %}<a href="/tag/{{ t.slug }}/">#{{ t.name }} <small>{{ n|fa }}</small></a>{% else %}<span class="off">#{{ t.name }}</span>{% endif %}{% endfor %}</div>
+{% endblock %}

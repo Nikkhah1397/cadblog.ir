@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-head"><h1>📚 کتابخانه‌ی مهندسی</h1><p>منابع بر اساس دسته و نوع فیلتر می‌شوند. فایل‌های حجیم در منابع خارجی هستند و فقط لینک آن‌ها آمده است.</p></div>
+<div class="filters">
+  <input id="lq" placeholder="جستجو در کتابخانه…" aria-label="جستجو در کتابخانه">
+  <select id="lcat" aria-label="دسته"><option value="">همه‌ی دسته‌ها</option>{% for c in cats %}<option value="{{ c.slug }}">{{ c.name }}</option>{% endfor %}</select>
+  <select id="ltype" aria-label="نوع"><option value="">همه‌ی انواع</option>{% for t in ltypes %}<option value="{{ t.slug }}">{{ t.name }}</option>{% endfor %}</select>
+</div>
+<div class="lib" id="lib">
+{% for i in items %}
+  <article class="lib-item" data-cat="{{ i.category }}" data-type="{{ i.type }}" data-text="{{ (i.title ~ ' ' ~ i.get('desc','') ~ ' ' ~ i.get('author',''))|lower }}">
+    <span class="type-chip">{{ i.type_obj.name }}</span>
+    <h3>{{ i.title }}</h3>
+    {% if i.author %}<small class="muted">{{ i.author }}</small>{% endif %}
+    <p>{{ i.desc }}</p>
+    <div class="tags"><a href="/category/{{ i.category }}/">{{ i.category_obj.name }}</a>{% for t in i.tags_obj %}<a href="/tag/{{ t.slug }}/">#{{ t.name }}</a>{% endfor %}</div>
+    {% if i.url %}<a class="btn small" href="{{ i.url }}" target="_blank" rel="noopener">{{ i.get('button','مشاهده / دریافت') }}</a>{% else %}<span class="muted">به‌زودی</span>{% endif %}
+  </article>
+{% endfor %}
+</div>
+<p class="empty" id="lib-empty" hidden>موردی پیدا نشد.</p>
+{% endblock %}

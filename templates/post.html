@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block content %}
+<article class="post">
+  <nav class="crumbs"><a href="/">خانه</a> › <a href="/category/{{ post.category.slug }}/">{{ post.category.name }}</a></nav>
+  <h1>{{ post.title }}</h1>
+  <div class="meta"><span>{{ post.date_fa }}</span><span>⏱ {{ post.minutes }} دقیقه مطالعه</span><a href="/category/{{ post.category.slug }}/">{{ post.category.icon }} {{ post.category.name }}</a></div>
+  {% if post.toc %}<details class="toc" open><summary>فهرست مطالب</summary>{{ post.toc|safe }}</details>{% endif %}
+  <div class="prose">{{ post.html|safe }}</div>
+  <div class="tags">{% for t in post.tags %}<a href="/tag/{{ t.slug }}/">#{{ t.name }}</a>{% endfor %}</div>
+  <div class="share">اگر مفید بود، در <a href="{{ site.telegram }}" target="_blank" rel="noopener">تلگرام {{ site.telegram_id }}</a> دنبال کنید.</div>
+</article>
+{% if related %}<h2 class="sec">مطالب مرتبط</h2><div class="grid">{% for p in related %}{{ card(p) }}{% endfor %}</div>{% endif %}
+{% endblock %}

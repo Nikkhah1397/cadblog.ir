@@ -1,0 +1,9 @@
+{% macro card(p) %}
+<article class="card">
+  <a class="cat-chip" href="/category/{{ p.category.slug }}/">{{ p.category.icon }} {{ p.category.name }}</a>
+  <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+  <p>{{ p.summary }}</p>
+  <div class="meta"><span>{{ p.date_fa }}</span><span>⏱ {{ p.minutes }} دقیقه</span></div>
+  <div class="tags">{% for t in p.tags %}<a href="/tag/{{ t.slug }}/">#{{ t.name }}</a>{% endfor %}</div>
+</article>
+{% endmacro %}

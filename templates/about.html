@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="post"><h1>درباره‌ی کدبلاگ</h1>
+<div class="prose">
+<p><b>کدبلاگ</b> برای مهندسان طراحی پلنت‌های صنعتی، به‌ویژه مهندسان پایپینگ ساخته شده است. هدف ما این است که تجربه‌های عملی، آموزش‌ها و ابزارهای رایگان را کنار هم و به‌صورت دسته‌بندی‌شده در دسترس بگذاریم.</p>
+<h2>چه چیزهایی اینجا پیدا می‌کنید؟</h2>
+<ul><li>آموزش پایپینگ، PDMS/E3D، PML و نرم‌افزارهای مهندسی</li><li>ابزارهای رایگان مثل STP2PDMS و Backing Sheet</li><li>کتابخانه‌ی کتاب، جزوه و چک‌لیست</li></ul>
+<h2>ارتباط با ما</h2>
+<p>کانال تلگرام: <a href="{{ site.telegram }}" target="_blank" rel="noopener">{{ site.telegram_id }}</a>{% if site.email %}<br>ایمیل: {{ site.email }}{% endif %}</p>
+</div></article>
+{% endblock %}

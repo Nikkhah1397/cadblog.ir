@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page_title %}{{ page_title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{{ description or site.description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:title" content="{{ page_title or site.title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:locale" content="fa_IR">
+<meta name="theme-color" content="#0f2742">
+<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="{{ site.title }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v={{ build_id }}">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="logo">C</span><span><b>{{ site.title }}</b><small>{{ site.title_en }}</small></span></a>
+    <nav id="nav">
+      <a href="/posts/">مطالب</a>
+      <a href="/library/">کتابخانه</a>
+      <a href="/category/tools/">ابزارها</a>
+      <a href="/tags/">برچسب‌ها</a>
+      <a href="/about/">درباره</a>
+    </nav>
+    <div class="actions">
+      <a class="icon-btn" href="/search/" aria-label="جستجو" title="جستجو">🔍</a>
+      <button class="icon-btn" id="theme" aria-label="تغییر حالت تیره/روشن" title="حالت تیره/روشن">🌓</button>
+      <button class="icon-btn menu" id="menu" aria-label="منو">☰</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer>
+  <div class="wrap foot">
+    <div><b>{{ site.title }}</b> · {{ site.tagline }}</div>
+    <div class="links"><a href="{{ site.telegram }}" target="_blank" rel="noopener">تلگرام {{ site.telegram_id }}</a> · <a href="/feed.xml">RSS</a> · <a href="/sitemap.xml">نقشه‌ی سایت</a></div>
+    <div class="muted">© {{ year }} کدبلاگ. استفاده از مطالب با ذکر منبع آزاد است.</div>
+  </div>
+</footer>
+<script src="/app.js?v={{ build_id }}" defer></script>
+</body>
+</html>

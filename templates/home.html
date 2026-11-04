@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block content %}
+<section class="hero">
+  <h1>{{ site.tagline }}</h1>
+  <p>آموزش و تجربه‌های عملی پایپینگ، نرم‌افزارهای AVEVA، ماکرونویسی و ابزارهای رایگان؛ همراه با یک کتابخانه‌ی دسته‌بندی‌شده برای مهندسان پلنت.</p>
+  <form action="/search/" class="searchbox" role="search"><input name="q" placeholder="جستجو: مثلاً ایزومتریک، PML، ساپورت…" aria-label="جستجو"><button>جستجو</button></form>
+  <div class="stats"><span><b>{{ post_count }}</b> مطلب</span><span><b>{{ library_count }}</b> منبع کتابخانه</span><span><b>{{ cats|length|fa }}</b> دسته‌بندی</span></div>
+</section>
+
+<h2 class="sec">دسته‌بندی‌ها</h2>
+<div class="cat-grid">
+{% for c in cats %}
+  <a class="cat-card" href="/category/{{ c.slug }}/"><span class="ico">{{ c.icon }}</span><b>{{ c.name }}</b><small>{{ c.desc }}</small><em>{{ cat_counts[c.slug]|fa }} مطلب</em></a>
+{% endfor %}
+</div>
+
+<h2 class="sec">تازه‌ترین مطالب <a class="more" href="/posts/">همه‌ی مطالب ←</a></h2>
+<div class="grid">{% for p in posts %}{{ card(p) }}{% endfor %}</div>
+
+<section class="cta">
+  <div><h2>کتابخانه‌ی مهندسی</h2><p>کتاب، جزوه، چک‌لیست و ابزارهای کاربردی را بر اساس دسته و نوع پیدا کنید.</p></div>
+  <a class="btn" href="/library/">ورود به کتابخانه</a>
+</section>
+
+<h2 class="sec">برچسب‌های پرکاربرد</h2>
+<div class="tags big">{% for t, n in tag_cloud %}<a href="/tag/{{ t.slug }}/">#{{ t.name }}</a>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block content %}
+<div class="page-head"><h1>{{ heading }}</h1>{% if intro %}<p>{{ intro }}</p>{% endif %}<small>{{ posts|length|fa }} مطلب</small></div>
+{% if posts %}<div class="grid">{% for p in posts %}{{ card(p) }}{% endfor %}</div>
+{% else %}<p class="empty">هنوز مطلبی در این بخش منتشر نشده است. به‌زودی…</p>{% endif %}
+{% endblock %}
