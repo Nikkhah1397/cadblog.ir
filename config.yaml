@@ -1,0 +1,85 @@
+# ===== تنظیمات اصلی سایت CADBLOG =====
+site:
+  title: "کدبلاگ"
+  title_en: "CADBLOG"
+  tagline: "مرجع فارسی طراحی مهندسی پلنت‌های صنعتی"
+  description: "آموزش، مقاله و کتابخانه‌ی طراحی مهندسی پایپینگ، PDMS/E3D، ماکرونویسی PML، تنش لوله و پلنت‌های صنعتی"
+  url: "https://cadblog.ir"
+  telegram: "https://t.me/AVEVAMACRO"
+  telegram_id: "@AVEVAMACRO"
+  author: "تیم کدبلاگ"
+  email: ""            # اگر خواستید ایمیل تماس بگذارید اینجا بنویسید
+
+# ===== دسته‌بندی‌ها (هر مطلب فقط یک دسته دارد) =====
+categories:
+  - slug: piping
+    name: پایپینگ
+    icon: "🛠"
+    desc: طراحی لوله‌کشی، استانداردها، ساپورت، تنش لوله و ایزومتریک
+  - slug: software
+    name: نرم‌افزارها
+    icon: "💻"
+    desc: PDMS و E3D، ماکرونویسی PML، AutoCAD Plant 3D، CAESAR II و Navisworks
+  - slug: process
+    name: فرآیند و تجهیزات
+    icon: "⚙"
+    desc: P&ID، پمپ، مخزن، مبدل حرارتی و تجهیزات دوار و ثابت
+  - slug: civil
+    name: سازه و Civil پلنت
+    icon: "🏗"
+    desc: فونداسیون، پایپ‌رک، سازه‌ی فولادی و نقشه‌های عمومی پلنت
+  - slug: electrical
+    name: برق و ابزاردقیق
+    icon: "⚡"
+    desc: آشنایی مهندس پایپینگ با برق و ابزاردقیق (در حد هماهنگی بین‌رشته‌ای)
+  - slug: tools
+    name: ابزارها و ماکروها
+    icon: "📦"
+    desc: ابزارهای رایگان ساخته‌شده توسط خودمان، مثل STP2PDMS و Backing Sheet
+
+# ===== برچسب‌ها (فهرست استاندارد و محدود) =====
+# قانون: برای هر مطلب ۲ تا ۵ برچسب از همین فهرست انتخاب کنید.
+tags:
+  # موضوع
+  - {slug: piping, name: پایپینگ}
+  - {slug: isometric, name: ایزومتریک}
+  - {slug: pipe-support, name: ساپورت لوله}
+  - {slug: stress-analysis, name: تنش لوله}
+  - {slug: pipe-class, name: پایپ کلس}
+  - {slug: valve, name: شیرآلات}
+  - {slug: mto, name: MTO و برآورد مواد}
+  - {slug: p-and-id, name: P&ID}
+  - {slug: plot-plan, name: پلات پلن}
+  - {slug: equipment, name: تجهیزات}
+  # نرم‌افزار
+  - {slug: pdms, name: PDMS}
+  - {slug: e3d, name: E3D}
+  - {slug: pml, name: PML}
+  - {slug: macro, name: ماکرو}
+  - {slug: isodraft, name: Isodraft}
+  - {slug: autocad, name: AutoCAD}
+  - {slug: plant-3d, name: Plant 3D}
+  - {slug: caesar-ii, name: CAESAR II}
+  - {slug: navisworks, name: Navisworks}
+  - {slug: excel, name: Excel}
+  # استاندارد
+  - {slug: asme-b31-3, name: ASME B31.3}
+  - {slug: standards, name: استاندارد}
+  # نوع محتوا
+  - {slug: tutorial, name: آموزش}
+  - {slug: checklist, name: چک‌لیست}
+  - {slug: tool, name: ابزار}
+  - {slug: case-study, name: نمونه‌کار}
+  - {slug: tips, name: نکته و ترفند}
+  # سطح
+  - {slug: beginner, name: مبتدی}
+  - {slug: advanced, name: پیشرفته}
+
+# ===== انواع منابع کتابخانه =====
+library_types:
+  - {slug: book, name: کتاب}
+  - {slug: standard, name: استاندارد}
+  - {slug: note, name: جزوه و مقاله}
+  - {slug: checklist, name: چک‌لیست}
+  - {slug: tool, name: ابزار}
+  - {slug: video, name: ویدیو}
